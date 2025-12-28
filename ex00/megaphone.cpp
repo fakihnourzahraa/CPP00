@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 18:17:11 by nour              #+#    #+#             */
-/*   Updated: 2025/12/28 18:22:43 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/28 21:01:24 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ int main() {
         std::cout << "DAMNIT ! SORRY STUDENTS, I THOUGHT THIS THING WAS OFF." <<std::endl;
     }
     if (count == 3)
-    {
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    }
-    return 0;
+    return (0);
 }
