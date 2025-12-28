@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/28 23:15:17 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/28 23:16:31 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void Phonebook::search(void)
 		std::cout << str <<  "|";
 		std::cout << std::setw(10);
 		str = truncate(contact.get_nickname());
-		std::cout << str << "|"<<std::endl;
+		std::cout << str << "|" << std::endl;
 		i++;
 		contact = Phonebook::contact[i];
 	}
