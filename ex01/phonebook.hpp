@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2025/12/28 22:26:20 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/28 23:12:55 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include "fstream"
 #include "iomanip"
+#include "cstdlib"
 
 class Contact {
     private: 
@@ -38,6 +39,7 @@ class Contact {
 	std::string		get_nickname();
 	std::string		get_num();
 	std::string		get_secret();
+
 };
 
 class Phonebook{
@@ -47,7 +49,7 @@ class Phonebook{
     public:
     void add(int i);
     void search(void);
-    // void exit(void);
+    void exit(void);
     // Phonebook();
     // ~Phonebook();
     // void    set_contacts();
