@@ -12,7 +12,7 @@ $(NAME): $(OBJ)
 	@echo "🏂 done making"
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c++ $< -o $@
 
 clean:
 	@rm -f $(OBJ)
