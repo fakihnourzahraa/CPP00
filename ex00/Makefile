@@ -1,18 +1,18 @@
 NAME    = megaphone
 
 SRC = megaphone.cpp
-OBJ     = $(SRC:.c=.o)
+OBJ     = $(SRC:.cpp=.o)
 
-CC      = c++ -Wall -Werror -Wextra -std=c++98
+CC  = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) -o $@ $^
+	@$(CC) -o $@ $^
 	@echo "🏂 done making"
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c++ $< -o $@
+%.o: %.cpp
+	@$(CC) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
