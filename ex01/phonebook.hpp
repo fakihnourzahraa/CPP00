@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2025/12/28 23:12:55 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/29 13:19:53 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Contact {
 
     public:
     Contact();
-    // ~Contact();
     void			set_fname(std::string str);
 	void			set_lname(std::string str);
 	void			set_nickname(std::string str);
@@ -50,10 +49,6 @@ class Phonebook{
     void add(int i);
     void search(void);
     void exit(void);
-    // Phonebook();
-    // ~Phonebook();
-    // void    set_contacts();
-    // void    get_contacts();
 };
 
 #endif
