@@ -1,47 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2025/12/29 13:19:53 by nfakih           ###   ########.fr       */
+/*   Updated: 2025/12/29 18:23:50 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-#include <iostream>
-#include "fstream"
-#include "iomanip"
-#include "cstdlib"
+# include <iostream>
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
+# include "Contact.hpp"
 
-class Contact {
-    private: 
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
-
-    public:
-    Contact();
-    void			set_fname(std::string str);
-	void			set_lname(std::string str);
-	void			set_nickname(std::string str);
-	void			set_num(std::string str);
-	void			set_secret(std::string str);
-    std::string		get_fname();
-    std::string		get_lname();
-	std::string		get_nickname();
-	std::string		get_num();
-	std::string		get_secret();
-
-};
-
-class Phonebook{
+class Phonebook
+{
     private:
     Contact contact[8];
 

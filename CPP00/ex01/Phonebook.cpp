@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/28 23:16:31 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/29 18:24:23 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
-Contact::Contact()
-{
-    first_name = "";
-    last_name = "";
-    nickname = "";
-    phone_number = "";
-    darkest_secret = "";
-}
 
 void Phonebook::add(int i)
 {
@@ -113,29 +105,3 @@ void	Phonebook::exit(void)
 	std::exit(0);
 }
 
-int main(void)
-{
-    Phonebook book;
-    std::string command;
-    int i;
-
-    i = 0;
-    while (1)
-    {
-        std::cout << "Enter a command (ADD, SEARCH, EXIT): " << std::endl;
-        std::getline(std::cin, command);
-        if (command == "ADD")
-        {
-            if (i == 8)
-                i = 0;
-            book.add(i);   
-			i++;
-        }
-        else if (command == "SEARCH")
-            book.search();
-        else if (command == "EXIT")
-            break ;
-    }
-	book.exit();
-    return (0);
-}

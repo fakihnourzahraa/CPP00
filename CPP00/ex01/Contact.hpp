@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
+/*   Updated: 2025/12/29 18:28:15 by nfakih           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
+# include <iostream>
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
+
+class Contact {
+    private: 
+    std::string first_name;
+    std::string last_name;
+    std::string nickname;
+    std::string phone_number;
+    std::string darkest_secret;
+
+    public:
+    void			set_fname(std::string str);
+	void			set_lname(std::string str);
+	void			set_nickname(std::string str);
+	void			set_num(std::string str);
+	void			set_secret(std::string str);
+    std::string		get_fname();
+    std::string		get_lname();
+	std::string		get_nickname();
+	std::string		get_num();
+	std::string		get_secret();
+};
+
+#endif
