@@ -1,4 +1,4 @@
-NAME = MOar_brainz!
+NAME = Moar_brainz!
 
 SRC = Zombie.cpp main.cpp zombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
