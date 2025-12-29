@@ -13,7 +13,8 @@
 #include "iostream"
 #include "fstream"
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     int i;
     
 	i = 1;
@@ -25,7 +26,7 @@ int main(int argc, char **argv) {
 	while (argv[i])
 	{
 		if (i > 1)
-			std::cout <<" " ;
+			std::cout <<" ";
 		int j = 0;
 		while (argv[i][j])
 		{
