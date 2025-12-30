@@ -6,20 +6,46 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 14:27:18 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/30 19:11:44 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Zombie.hpp"
+# include "iostream"
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
 
-int main(void)
+int main(int argc, char **argv)
 {
-	int	i = 5;
-	Zombie *zom = zombieHorde(5, "nour");
-	for (int j = 0; j < i; j++)
+    if (argc != 4)
+		return (1);
+
+	std::string name = argv[1];
+	std::string s1 = argv[2];
+	std::string s2 = argv[3];
+    
+    std::ifstream infile(name);
+    if (!infile.is_open())
 	{
-		zom[j].announce();
+        std::cout<< "file is non existent or not readable" << std::endl;
+		return (1);
 	}
-	delete[] zom;
-    return (0);
+
+	std::string line;
+	while (std::getline(infile, line))
+	{
+		int pos = 0;
+		while (1)
+		{
+			int a = line.find(s1, pos);
+			if (a == -1 || a == std::string::npos || a == (line.length() - 1) )
+			{
+				pos = a;
+				break;
+			}
+			
+		}
+	}
+	
+    return 0;
 }

@@ -1,6 +1,6 @@
-NAME = Unnecessary_violence
+NAME = Sed_is_for_losers
 
-SRC = Zombie.cpp main.cpp ZombieHorde.cpp
+SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC  = c++ -std=c++98

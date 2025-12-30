@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 18:19:16 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/29 18:23:37 by nfakih           ###   ########.fr       */
+/*   Updated: 2025/12/30 14:16:29 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main(void)
 {
-    Phonebook book;
+    Phonebook   book;
     std::string command;
-    int i;
+    int         i;
 
     i = 0;
     while (1)

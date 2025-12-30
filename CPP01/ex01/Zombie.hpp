@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2025/12/29 15:11:43 by nfakih           ###   ########.fr       */
+/*   Updated: 2025/12/30 14:30:16 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <iostream>
-#include "fstream"
-#include "iomanip"
-#include "cstdlib"
+# include "iostream"
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
 
-class Zombie {
+class Zombie
+{
     private: 
     std::string name;
 

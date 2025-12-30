@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/29 18:24:23 by nfakih           ###   ########.fr       */
+/*   Updated: 2025/12/30 14:16:51 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
-
 
 void Phonebook::add(int i)
 {
@@ -30,7 +29,7 @@ void Phonebook::add(int i)
     std::cout << "Enter phone number: " <<std::endl;
     std::getline(std::cin, str);
 	contact.set_num(str);
-    std::cout << "Enter darkest secret:" <<std::endl;
+    std::cout << "Enter darkest secret: " <<std::endl;
     std::getline(std::cin, str);
 	contact.set_secret(str);
 }
