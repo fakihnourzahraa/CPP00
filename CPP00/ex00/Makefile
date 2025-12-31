@@ -1,9 +1,9 @@
-NAME    = megaphone
+NAME = megaphone
 
 SRC = megaphone.cpp
-OBJ     = $(SRC:.cpp=.o)
+OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -Wall -Werror -Wextra -std=c++98
+CC = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 

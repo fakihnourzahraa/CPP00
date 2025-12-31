@@ -6,11 +6,11 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/31 13:51:17 by nfakih           ###   ########.fr       */
+/*   Updated: 2025/12/31 15:09:27 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+# include "Phonebook.hpp"
 
 int	alpha(std::string str)
 {
@@ -125,7 +125,7 @@ void Phonebook::search(void)
 		contact = Phonebook::contact[i];
 	}
 	std::cout << "Enter user to display: ";
-	if(!std::getline(std::cin, str) || str == "")
+	if(!std::getline(std::cin, str) || str == "" || !digit(str))
 		std::exit(0);
 	i = std::atoi(str.c_str());
 	if (i >= 8 || i < 0)

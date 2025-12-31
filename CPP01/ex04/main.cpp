@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 19:11:44 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/31 17:58:12 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int main(int argc, char **argv)
 	std::string name = argv[1];
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
-    
+	std::string	new_name = name + ".replace";
+
     std::ifstream infile(name);
     if (!infile.is_open())
 	{
@@ -41,11 +42,9 @@ int main(int argc, char **argv)
 			if (a == -1 || a == std::string::npos || a == (line.length() - 1) )
 			{
 				pos = a;
-				break;
-			}
-			
+				break ;
+			}	
 		}
 	}
-	
-    return 0;
+    return (0);
 }

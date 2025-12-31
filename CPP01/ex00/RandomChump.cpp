@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RandomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:48:34 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 14:20:59 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/31 14:12:52 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	randomChump(std::string name)
 
 	zombie.set_name(name);
 	zombie.announce();
-	return;
+	return ;
 }
