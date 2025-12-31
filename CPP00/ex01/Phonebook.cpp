@@ -3,14 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/30 14:16:51 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/31 13:51:17 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
+
+int	alpha(std::string str)
+{
+	for (unsigned long i = 0; i < str.length(); i++)
+	{
+		if (!isalpha(str[i]))
+			return (0);
+	}
+	return (1);
+}
+int	digit(std::string str)
+{
+	for (unsigned long i = 0; i < str.length(); i++)
+	{
+		if (!isdigit(str[i]))
+			return (0);
+	}
+	return (1);
+}
 
 void Phonebook::add(int i)
 {
@@ -18,21 +37,48 @@ void Phonebook::add(int i)
     std::string str;
 
     std::cout << "Enter first name: " <<std::endl;
-    std::getline(std::cin, str);
+    if(!std::getline(std::cin, str) || str == "" || !alpha(str))
+	{
+		std::cin.clear();
+		std::clearerr(stdin);
+		std::clearerr(stdin);
+		return; 
+	}
 	contact.set_fname(str);
     std::cout << "Enter last name: " <<std::endl;
-    std::getline(std::cin, str);
+    if(!std::getline(std::cin, str) || str == "" || !alpha(str))
+	{
+		std::cin.clear();
+		std::clearerr(stdin);
+		return;
+	}
 	contact.set_lname(str);
     std::cout << "Enter nickname: " <<std::endl;
-    std::getline(std::cin, str);
+    if(!std::getline(std::cin, str) || str == "" || !alpha(str))
+	{
+		std::cin.clear();
+		std::clearerr(stdin);
+		return;
+	}
 	contact.set_nickname(str);
     std::cout << "Enter phone number: " <<std::endl;
-    std::getline(std::cin, str);
+    if(!std::getline(std::cin, str) || str == "" || !digit(str))
+	{
+		std::cin.clear();
+		std::clearerr(stdin);
+		return;
+	}
 	contact.set_num(str);
     std::cout << "Enter darkest secret: " <<std::endl;
-    std::getline(std::cin, str);
+    if(!std::getline(std::cin, str) || str == "" )
+	{
+		std::cin.clear();
+		std::clearerr(stdin);
+		return;
+	}
 	contact.set_secret(str);
 }
+
 std::string truncate( std::string str) {
 	int	len;
 
@@ -79,15 +125,16 @@ void Phonebook::search(void)
 		contact = Phonebook::contact[i];
 	}
 	std::cout << "Enter user to display: ";
-	std::getline(std::cin, str);
+	if(!std::getline(std::cin, str) || str == "")
+		std::exit(0);
 	i = std::atoi(str.c_str());
-	if (i >= 8)
+	if (i >= 8 || i < 0)
 	{
 		std::cout << "out of range, sorry"<<std::endl;
 	}
 	else
 	{
-		contact =Phonebook::contact[i];
+		contact = Phonebook::contact[i];
 		if (contact.get_fname() != "")
 		{
 			std::cout << "First Name: " << contact.get_fname() << std::endl;

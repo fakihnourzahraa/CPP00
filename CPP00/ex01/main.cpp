@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 18:19:16 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 14:16:29 by nour             ###   ########.fr       */
+/*   Updated: 2025/12/31 13:49:11 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ int main(void)
     while (1)
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): " << std::endl;
-        std::getline(std::cin, command);
-        if (command == "ADD")
+    	if(!std::getline(std::cin, command) || command == "")
+		{
+			std::cin.clear();
+			std::clearerr(stdin);
+		}
+        else if (command == "ADD")
         {
             if (i == 8)
                 i = 0;
@@ -34,7 +38,13 @@ int main(void)
             book.search();
         else if (command == "EXIT")
             break ;
-    }
+		else
+		{	
+			std::cout << std::endl;
+			std::cout << "invalid command, please try again" << std::endl;
+			std::cin.clear();
+    	}
+	}
 	book.exit();
     return (0);
 }
