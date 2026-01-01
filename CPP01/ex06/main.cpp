@@ -6,20 +6,17 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/01 17:23:11 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/01 17:30:19 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Zombie.hpp"
+# include "Harl.hpp"
 
-int main(void)
+int main(int argc, char **argv)
 {
-	int	i = 5;
-	Zombie *zom = zombieHorde(5, "nour");
-	for (int j = 0; j < i; j++)
-	{
-		zom[j].announce();
-	}
-	delete[] zom;
+	Harl harl;
+	if (argc != 2)
+		return (1);
+	harl.complain(argv[1]);
     return (0);
 }

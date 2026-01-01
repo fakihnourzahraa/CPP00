@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2025/12/30 14:21:34 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/01 17:16:10 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Zombie
     std::string name;
 
     public:
+    Zombie(std::string name);
+    Zombie();
 	~Zombie();
 	void		set_name(std::string name);
     void		announce(void);

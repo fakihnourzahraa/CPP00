@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/01 17:23:11 by nour             ###   ########.fr       */
+/*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
+/*   Updated: 2026/01/01 13:27:37 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int main(void)
+# include "iostream"
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
+
+class Harl
 {
-	int	i = 5;
-	Zombie *zom = zombieHorde(5, "nour");
-	for (int j = 0; j < i; j++)
-	{
-		zom[j].announce();
-	}
-	delete[] zom;
-    return (0);
-}
+    private: 
+    void    debug(void);
+    void    info(void);
+    void    warning(void);
+    void    error(void);
+
+    public:
+	void		complain(std::string level);
+
+};
+
+#endif

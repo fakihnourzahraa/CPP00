@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/01 16:02:04 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/01 16:07:55 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed &Fixed::operator=(const Fixed &other)
     if (this == &other)
         return *this;
     num = other.num;
-    return *this;
+    return (*this);
 }
 
 Fixed::Fixed()
@@ -45,18 +45,20 @@ void    Fixed::setRawBits(int const raw)
     return ;
 }
 
-int        Fixed::getRawBits(void) const
+int Fixed::getRawBits(void) const
 {
     return (num);
 }
 
 Fixed::Fixed(const int a)
 {
+    std::cout << "int constructor is called" << std::endl;
     num = a << frac;
 }
 
 Fixed::Fixed(const float a)
 {
+    std::cout << "float constructor is called" << std::endl;
     num = roundf(a * (1 << frac));
 }
 

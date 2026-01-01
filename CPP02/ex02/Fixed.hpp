@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 13:54:05 by nour              #+#    #+#             */
-/*   Updated: 2026/01/01 16:03:59 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/01 16:49:22 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,34 @@ class Fixed {
     Fixed(const int a);
     Fixed(const float a);
     Fixed(const Fixed& other);
-    Fixed   &operator=(const Fixed &other);
-    void    setRawBits(int const raw);
-    int     getRawBits(void) const;
-    float   toFloat(void) const;
-    int     toInt(void) const;
+
+    void			setRawBits(int const raw);
+	int				getRawBits(void) const;
+	float			toFloat(void) const;
+	int				toInt(void) const;
+	Fixed			&operator=(const Fixed &other);
+
+    bool			operator>(const Fixed &other) const;
+    bool			operator<(const Fixed &other) const;
+    bool			operator>=(const Fixed &other) const;
+    bool			operator<=(const Fixed &other) const;
+    bool			operator==(const Fixed &other) const;
+    bool			operator!=(const Fixed &other) const;
+
+    Fixed           operator*(const Fixed &other) const;
+    Fixed           operator/(const Fixed &other) const;
+    Fixed           operator+(const Fixed &other) const;
+    Fixed           operator-(const Fixed &other) const;
+
+    Fixed           &operator++();
+    Fixed           operator++(int);
+    Fixed           &operator--();
+    Fixed           operator--(int);
+
+    static Fixed	&min(Fixed &first, Fixed &second);
+    static Fixed	&max(Fixed &first, Fixed &second);
+    static const Fixed	&min(const Fixed &first, const Fixed &second);
+    static const Fixed	&max(const Fixed &first, const Fixed &second);
 };
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);

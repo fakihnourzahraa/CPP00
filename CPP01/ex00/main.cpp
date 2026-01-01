@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 14:23:10 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/01 17:21:26 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int main(void)
 {
-	Zombie *zom = newZombie("nour");
-	zom->announce();
-	zom->~Zombie();
+	// Zombie *zom = newZombie("nour");
+	// zom->announce();
+	// zom->~Zombie();
 	randomChump("fka");
     return (0);
 }
