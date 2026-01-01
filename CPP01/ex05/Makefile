@@ -1,9 +1,9 @@
-NAME = Sed_is_for_losers
+NAME = Harl_2.0
 
-SRC =  main.cpp
+SRC = main.cpp Harl.hpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -Wall -Wextra -Werror -std=c++98
+CC  = c++ -std=c++98
 
 all: $(NAME)
 
