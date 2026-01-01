@@ -1,6 +1,6 @@
 NAME = Harl_2.0
 
-SRC = main.cpp Harl.hpp Harl.cpp
+SRC = Harl.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC  = c++ -std=c++98
