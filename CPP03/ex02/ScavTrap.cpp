@@ -6,25 +6,34 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 17:00:41 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/02 17:23:44 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap() : ClapTrap("default")
+{
+	this->hit_points = 100;
+	this->energy_points = 50;
+	this->attack_damage = 20;
+	std::cout << "ScavTrap default is created" << std::endl;
+	
+}
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	this->hit_points = 100;
 	this->energy_points = 50;
 	this->attack_damage = 20;
-	std::cout << "ScavTrap " << name << " created" << std::endl;
+	std::cout << "ScavTrap " << name << " is created" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string &target)
 {
 	if (this->hit_points > 0 && this->energy_points > 0)
 	{
-		std::cout << "ScavTrap " << this->name << " is attacking" << std::endl;
+		std::cout << "ScavTrap " << this->name << " is attacking " << target << " causing "
+		<< this->attack_damage << " points of damage" << std::endl;
 		this->energy_points = this->energy_points - 1;
 	}
 	else

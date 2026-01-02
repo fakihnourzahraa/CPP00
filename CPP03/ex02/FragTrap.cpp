@@ -6,25 +6,33 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 17:08:29 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/02 17:26:56 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "FragTrap.hpp"
 
+FragTrap::FragTrap() : ClapTrap("default")
+{
+	this->hit_points = 100;
+	this->energy_points = 100;
+	this->attack_damage = 30;
+	std::cout << "FragTrap default is created" << std::endl;
+}
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	this->hit_points = 100;
 	this->energy_points = 100;
 	this->attack_damage = 30;
-	std::cout << "FragTrap " << name << " created" << std::endl;
+	std::cout << "FragTrap " << name << " is created" << std::endl;
 }
 
 void	FragTrap::attack(const std::string &target)
 {
 	if (this->hit_points > 0 && this->energy_points > 0)
 	{
-		std::cout << "FragTrap " << this->name << " is attacking" << std::endl;
+		std::cout << "FragTrap " << this->name << " is attacking " << target << " causing "
+		<< this->attack_damage << " points of damage" << std::endl;
 		this->energy_points = this->energy_points - 1;
 	}
 	else
