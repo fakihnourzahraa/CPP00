@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 17:05:16 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 17:24:29 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/02 17:35:20 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "cstdlib"
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap 
+class FragTrap : virtual public ClapTrap 
 {
     public:
 	FragTrap();

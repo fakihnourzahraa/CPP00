@@ -3,7 +3,7 @@ NAME = and_open
 SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -std=c++98
+CC  = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
