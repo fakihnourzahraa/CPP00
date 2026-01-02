@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 15:34:15 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/02 16:56:26 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ ClapTrap::ClapTrap(std::string name)
 	this->hit_points = 10;
 	this->energy_points = 10;
 	this->attack_damage = 10;
-	std::cout << name << " created" << std::endl;
+	std::cout << "ClapTrap " << name << " is created" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string &target)
 {
 	if (this->hit_points > 0 && this->energy_points > 0)
 	{
-		std::cout << this->name << " attacking" << std::endl;
+		std::cout << "ClapTrap " << this->name << " is attacking" << std::endl;
 		this->energy_points = this->energy_points - 1;
 	}
 	else
 	{
-		std::cout << this->name << " doesn't have enough points" << std::endl;
+		std::cout << "ClapTrap " << this->name << " doesn't have enough points" << std::endl;
 	}
 	return ;
 }
@@ -57,7 +57,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << this->name << " destructor called" << std::endl;
+	std::cout << "ClapTrap " << this->name << " destructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other) : name(other.name), hit_points(other.hit_points), energy_points(other.energy_points), attack_damage(other.attack_damage)
@@ -90,4 +90,9 @@ unsigned int	ClapTrap::get_energyPoints(void)
 unsigned int	ClapTrap::get_attackDamage(void)
 {
 	return (attack_damage);	
+}
+
+std::string	ClapTrap::get_name(void)
+{
+	return (name);
 }
