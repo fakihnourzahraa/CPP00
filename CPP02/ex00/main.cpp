@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 18:19:16 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/01 15:37:49 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 14:55:43 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int main(void)
     Fixed c;
 
     c = b;
-
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
