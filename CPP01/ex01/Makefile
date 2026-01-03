@@ -1,4 +1,4 @@
-NAME = Unnecessary_violence
+NAME = Moar_Brainz
 
 SRC = Zombie.cpp main.cpp ZombieHorde.cpp
 OBJ = $(SRC:.cpp=.o)
