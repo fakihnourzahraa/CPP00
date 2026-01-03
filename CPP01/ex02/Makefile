@@ -3,7 +3,7 @@ NAME = HI_THIS_IS_BRAIN
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -std=c++98
+CC  = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 

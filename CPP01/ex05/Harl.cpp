@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/01 17:37:08 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 14:01:00 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ void    Harl::complain(std::string level)
 		if (levels[i] == level)
 		{
 			(this->*ptr[i])();
+			return ;
 		}
 		i++;
 	}
+	std::cout << "invalid level, try again" << std::endl;
 }
 
 void	Harl::debug(void)

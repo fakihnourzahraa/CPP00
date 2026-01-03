@@ -3,7 +3,7 @@ NAME = BraiiiiiiinnnzzzZ
 SRC = Zombie.cpp main.cpp newZombie.cpp RandomChump.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -std=c++98
+CC  = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 

@@ -3,7 +3,7 @@ NAME = Unnecessary_Violence
 SRC = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -std=c++98
+CC  = c++ -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
