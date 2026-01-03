@@ -1,4 +1,4 @@
-NAME = and_open
+NAME = serena_my_love
 
 SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)

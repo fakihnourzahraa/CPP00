@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/02 14:51:38 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 15:12:55 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,26 @@
 
 int main()
 {
-    std::cout << "=== Creating ClapTrap ===" << std::endl;
     ClapTrap clap("Bob");
-    
-    std::cout << "\n=== Testing attack ===" << std::endl;
-    clap.attack("target1");
-    clap.attack("target2");
-    clap.attack("target3");
-    
-    std::cout << "\n=== Testing repair ===" << std::endl;
+
+    clap.attack("target");
+    clap.attack("target");
+
+    std::cout << std::endl;
+
     clap.beRepaired(5);
-    clap.beRepaired(3);
-    
-    std::cout << "\n=== Testing take damage ===" << std::endl;
-    clap.takeDamage(8);
-    clap.takeDamage(5);
-    
-    std::cout << "\n=== Testing with no hit points ===" << std::endl;
-    clap.attack("target4");
-    clap.beRepaired(10);
-    
-    std::cout << "\n=== Testing copy constructor ===" << std::endl;
+    clap.takeDamage(15);
+
+    std::cout << std::endl;
+
+    clap.attack("target");
+
     ClapTrap clap2(clap);
-    
-    std::cout << "\n=== Testing assignment operator ===" << std::endl;
     ClapTrap clap3("Alice");
     clap3 = clap;
-    
-    std::cout << "\n=== Destructors ===" << std::endl;
+
+    std::cout << std::endl;
+    clap3.attack("target");
+    clap2.attack("target");
     return 0;
 }
