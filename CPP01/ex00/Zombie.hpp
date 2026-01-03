@@ -6,17 +6,17 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 12:47:38 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 14:05:35 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <iostream>
-#include "fstream"
-#include "iomanip"
-#include "cstdlib"
+# include <iostream>
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
 
 class Zombie
 {

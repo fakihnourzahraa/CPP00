@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/31 14:13:45 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/03 14:06:06 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "fstream"
-#include "iomanip"
-#include "cstdlib"
+# include <iostream>
+# include "fstream"
+# include "iomanip"
+# include "cstdlib"
 
 int main(void)
 {

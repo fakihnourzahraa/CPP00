@@ -6,11 +6,11 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 12:39:38 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 14:05:41 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+# include "Zombie.hpp"
 
 void Zombie::set_name(std::string str)
 {
