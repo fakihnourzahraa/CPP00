@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/01 13:01:08 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 13:56:35 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,14 @@
 # include "iomanip"
 # include "cstdlib"
 
-// void	replace_strings(std::string s1, std::string s2, std::string input, std::string new_name )
-// {
-// 	size_t 	i = 0;
-// 	int 	s2_len = s2.length();
-// 	int		s1_len = s1.length();
-
-// 	std::ofstream file(new_name.c_str());
-// 	while ((i == input.find(s1, i)) != std::string::npos)
-// 	{
-// 		int j = 0;
-// 		while ((j + i))
-// 		i+= s2.length();
-// 	}
-// }
-
 void replace_strings(std::string s1, std::string s2, std::string input, std::string new_name)
 {
     std::ofstream	file(new_name.c_str());
+    if (!file)
+    {
+        std::cout << "Access required for " << new_name <<std::endl;
+        return;
+    }
     std::string 	result = "";
     size_t 			pos = 0;
     size_t 			found = 0;
@@ -59,10 +49,9 @@ int main(int argc, char **argv)
     std::ifstream infile(name.c_str());
     if (!infile.is_open())
 	{
-        std::cout<< "file is non existent or not readable" << std::endl;
+        std::cout<< "file " << s1 << " is non existent or not readable" << std::endl;
 		return (1);
 	}
-	infile.close();
 
 	std::string line;
 	std::string	input;
@@ -71,6 +60,7 @@ int main(int argc, char **argv)
 		input += line;
 		input += "\n";
 	}
+	infile.close();
 	replace_strings(s1, s2, input, new_name);
     return (0);
 }
