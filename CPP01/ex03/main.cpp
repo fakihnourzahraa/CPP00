@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2025/12/30 18:27:34 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 13:36:24 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int main(void)
 	bob.attack();
 	w.setType("something");
 	bob.attack();
-	Weapon	c = Weapon("club");
+	w.setType("club");
 	HumanB jim("Jim");
-	jim.set_weapon(c);
+	jim.set_weapon(w);
 	jim.attack();
-	c.setType("other");
+	w.setType("other");
 	jim.attack();
     return (0);
 }

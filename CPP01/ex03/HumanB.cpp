@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2025/12/30 18:27:53 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 13:30:25 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void HumanB::attack(void)
 {
-	std::cout << name << " attacks with " << weapon->getType() << std::endl;
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 	return ;
 }
 HumanB::HumanB(std:: string n)
