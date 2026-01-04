@@ -6,12 +6,12 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/03 15:23:46 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 15:37:52 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
 int main()
 {

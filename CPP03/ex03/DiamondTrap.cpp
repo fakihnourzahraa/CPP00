@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 17:31:50 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 17:53:25 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 15:36:23 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap " << this->name << " destructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), FragTrap()
+DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(), FragTrap()
 {
     std::cout << "DiamondTrap copy constructor is called" <<std::endl;
 }
@@ -57,7 +57,9 @@ DiamondTrap  &DiamondTrap::operator=(const DiamondTrap &other)
 {
     std::cout << "DiamondTrap copy assignement constructor is called" << std::endl;
     if (this == &other)
-        return *this;
+    {    
+		return (*this);
+	}
 	this->name = other.name;
 	ClapTrap::operator=(other);
 	ScavTrap::operator=(other);

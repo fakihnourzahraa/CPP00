@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 15:25:35 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/03 15:30:05 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 	{
-		std::cout << this->name << " doesn't have enough points" << std::endl;
+		std::cout << "ClapTrap " << this->name << " doesn't have enough points" << std::endl;
 	}
 }
 
@@ -66,7 +66,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		this->hit_points = (unsigned int)a;
 	else
 		this->hit_points = 0;
-	std::cout << this->name << " lost " << amount << " hit points" << std::endl; 
+	std::cout << "ClapTrap " << this->name << " lost " << amount << " hit points" << std::endl; 
 }
 
 ClapTrap::~ClapTrap()
