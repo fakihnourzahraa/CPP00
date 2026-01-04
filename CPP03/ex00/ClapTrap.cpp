@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 15:30:05 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 11:37:44 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,9 @@ ClapTrap  &ClapTrap::operator=(const ClapTrap &other)
 {
     std::cout << "Copy assignement constructor is called" << std::endl;
     if (this == &other)
+    {
         return *this;
+    }
     name = other.name;
 	hit_points = other.hit_points;
 	energy_points = other.energy_points;

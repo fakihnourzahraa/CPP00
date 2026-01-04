@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/01 16:07:55 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 11:37:44 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ Fixed &Fixed::operator=(const Fixed &other)
 {
     std::cout << "Copy assignement constructor is called" << std::endl;
     if (this == &other)
+    {
         return *this;
+    }
     num = other.num;
     return (*this);
 }

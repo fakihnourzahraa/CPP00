@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/02 17:26:56 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 11:37:44 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ FragTrap  &FragTrap::operator=(const FragTrap &other)
 {
     std::cout << "FragTrap copy assignement constructor is called" << std::endl;
     if (this == &other)
+    {
         return *this;
+    }
 	ClapTrap::operator=(other);
     return (*this);
 }

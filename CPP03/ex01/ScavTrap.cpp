@@ -6,13 +6,13 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 15:15:22 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 11:20:33 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap("default")
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	this->hit_points = 100;
 	this->energy_points = 50;
