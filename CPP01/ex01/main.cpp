@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/01 17:23:11 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/05 11:15:52 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ int main(void)
 	{
 		zom[j].announce();
 	}
+
+	std::cout << std::endl;
+	(zom)->set_name("m");
+	zom[0].announce();
+	std::cout << std::endl;
+
 	delete[] zom;
     return (0);
 }

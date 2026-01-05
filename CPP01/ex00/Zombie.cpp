@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 14:05:41 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/05 11:08:56 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void Zombie::set_name(std::string str)
 
 void	Zombie::announce(void)
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." <<std::endl;
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 	return ;
 }
 Zombie::~Zombie()
@@ -33,5 +33,6 @@ Zombie::Zombie(std::string name)
 }
 Zombie::Zombie()
 {
-	std::cout << "Default zombie is created" << std::endl;
+	name = "Default";
+	std::cout << name << " is created" << std::endl;
 }
