@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 13:16:28 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 13:26:02 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 20:05:48 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include "iomanip"
 # include "cstdlib"
 # include "AMateria.hpp"
-# include "IMateriaSource.hpp"
+# include "MateriaSource.hpp"
 
 class ICharacter
 {

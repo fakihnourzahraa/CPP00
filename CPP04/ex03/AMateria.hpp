@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 13:28:35 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/04 20:06:23 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "iomanip"
 # include "cstdlib"
 # include "ICharacter.hpp"
+# include "MateriaSource.hpp"
 
 class AMateria
 {
