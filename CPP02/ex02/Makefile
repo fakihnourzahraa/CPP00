@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/01/05 14:22:32 by nfakih            #+#    #+#              #
+#    Updated: 2026/01/05 14:24:31 by nfakih           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = now_were_talking
 
 SRC = Fixed.cpp  main.cpp
@@ -26,4 +38,4 @@ re: fclean all
 
 ex: all clean
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re ex

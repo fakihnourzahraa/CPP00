@@ -3,31 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 11:37:44 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/05 15:27:18 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Fixed.hpp"
 
-const int Fixed::frac = 8;
-
 //original functions
-Fixed::Fixed(const Fixed& other) : num(other.num)
+Fixed::Fixed(const Fixed& other)
 {
     std::cout << "Copy constructor is called" <<std::endl;
+	num = other.getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
-    std::cout << "Copy assignement constructor is called" << std::endl;
+    std::cout << "Copy assignement operator is called" << std::endl;
     if (this == &other)
     {
-        return *this;
+        return (*this);
     }
-    num = other.num;
+    num = other.getRawBits();
     return (*this);
 }
 
@@ -155,6 +154,11 @@ Fixed           Fixed::operator*(const Fixed &other) const
 Fixed           Fixed::operator/(const Fixed &other) const
 {
     Fixed fixed;
+	if (other.num == 0 || this->num == 0)
+	{
+		fixed.num = 0;
+		return (fixed);
+	}
     fixed.num = ((num << frac) / other.num);
     return (fixed);  
 }

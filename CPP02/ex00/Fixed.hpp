@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 13:54:05 by nour              #+#    #+#             */
-/*   Updated: 2026/01/01 15:45:21 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/05 14:44:06 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 # include <iomanip>
 # include <cstdlib>
 
-class Fixed {
+class Fixed
+{
     private: 
     int                 num;
-    static const int    frac;
+	static const int 	frac = 8;
 
     public:
     Fixed();
