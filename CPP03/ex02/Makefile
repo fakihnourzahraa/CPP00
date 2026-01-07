@@ -1,6 +1,6 @@
 NAME = and_open
 
-SRC = ClapTrap.cpp ScavTrap.cpp main.cpp
+SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC  = c++ -Wall -Werror -Wextra -std=c++98
@@ -26,4 +26,4 @@ re: fclean all
 
 ex: all clean
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re ex

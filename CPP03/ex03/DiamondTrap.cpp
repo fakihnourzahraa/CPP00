@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 17:31:50 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 15:36:23 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/07 16:57:34 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() : ClapTrap("default"), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap() : ClapTrap("default_clap_name"), ScavTrap(), FragTrap()
 {
 	this->name = "default";
 	this->hit_points = FragTrap::hit_points;
@@ -29,28 +29,18 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 	std::cout << "DiamondTrap " << name << " is created" << std::endl;
 }
 
-void	DiamondTrap::attack(const std::string &target)
-{
-	if (this->hit_points > 0 && this->energy_points > 0)
-	{
-		std::cout << "DiamondTrap " << this->name << " is attacking " << target << " causing "
-		<< this->attack_damage << " points of damage" << std::endl;
-		this->energy_points = this->energy_points - 1;
-	}
-	else
-	{
-		std::cout << "DiamondTrap " << this->name << " doesn't have enough points" << std::endl;
-	}
-	return ;
-}
 
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "DiamondTrap " << this->name << " destructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(const DiamondTrap &other) : ClapTrap(other), ScavTrap(other), FragTrap(other)
 {
+	name = other.name;
+	hit_points = other.hit_points;
+	energy_points = other.energy_points;
+	attack_damage = other.attack_damage;
     std::cout << "DiamondTrap copy constructor is called" <<std::endl;
 }
 DiamondTrap  &DiamondTrap::operator=(const DiamondTrap &other)

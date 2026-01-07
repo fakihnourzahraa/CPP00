@@ -3,34 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/03 15:37:46 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/07 16:11:22 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
 int main()
 {
-    ScavTrap scav("Charlie");
-    scav.attack("target");
-    scav.guardGate();
+    FragTrap frag("Charlie");
+    frag.attack("target");
+    frag.highFiveGuys();
 
     std::cout << std::endl;
-    scav.beRepaired(20);
-    scav.takeDamage(80);
-    scav.takeDamage(60);
+    frag.beRepaired(20);
+    frag.takeDamage(180);
 
-    scav.attack("target");
+    frag.attack("target");
     
     std::cout << std::endl;
 
-    ScavTrap scav2(scav);
-    ScavTrap scav3("Diana");
-    scav3 = scav;
+    FragTrap frag2(frag);
+    frag2 = frag;
+    FragTrap frag3("Diana");
+
     
     std::cout << std::endl;
     return 0;

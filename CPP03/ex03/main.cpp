@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/03 15:39:56 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/07 17:11:41 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,28 @@
 int main()
 {
 
-    DiamondTrap diamond("Diamond");
+    DiamondTrap diamond("aya");
+	std::cout << std::endl;
 
     diamond.attack("target1");
 
     diamond.takeDamage(30);
+	std::cout << std::endl;
 
     diamond.beRepaired(20);
+		std::cout << std::endl;
+
     diamond.guardGate();
+	std::cout << std::endl;
 
     diamond.whoAmI();
+	std::cout << std::endl;
 
     DiamondTrap copy(diamond);
     copy.whoAmI();
+	std::cout << std::endl;
 
-    DiamondTrap assigned("Assigned");
+    DiamondTrap assigned("rayan");
     assigned = diamond;
     assigned.whoAmI();
     
@@ -37,3 +44,5 @@ int main()
   
     return 0;
 }
+
+

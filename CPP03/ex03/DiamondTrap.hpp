@@ -6,7 +6,7 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 17:32:14 by nour              #+#    #+#             */
-/*   Updated: 2026/01/07 15:58:52 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/07 16:41:47 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
 	DiamondTrap(const DiamondTrap &other);
 	DiamondTrap &operator=(const DiamondTrap &other);
 	using ScavTrap::attack;
-	void			attack(const std::string &target);
 	void			highFiveGuys(void);
 	void			whoAmI(void);
 };
