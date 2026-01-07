@@ -6,7 +6,7 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:52:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/07 15:56:01 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/07 17:13:13 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ FragTrap::FragTrap() : ClapTrap("default")
 }
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
+	this->name = name;
 	this->hit_points = 100;
 	this->energy_points = 100;
 	this->attack_damage = 30;
