@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 11:08:12 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 13:42:52 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/07 18:26:03 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,18 @@ Ice::Ice(void) : AMateria("ice")
 Ice::~Ice(void)
 {
    std::cout << "Ice destructor called" << std::endl;
+}
+Ice &Ice::operator=(const Ice &other)
+{
+	
+}
+Ice::Ice(const Ice &other)
+{
+	
+}
+AMateria *Ice::clone(void) const
+{
+
 }
 void    AMateria::use(ICharacter &target)
 {
