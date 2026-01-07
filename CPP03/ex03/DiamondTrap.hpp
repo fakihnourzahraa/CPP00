@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 17:32:14 by nour              #+#    #+#             */
-/*   Updated: 2026/01/03 15:37:28 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/07 15:58:52 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include "iomanip"
 # include "cstdlib"
 # include "ClapTrap.hpp"
-# include "DiamondTrap.hpp"
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
 
