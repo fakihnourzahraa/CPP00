@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 11:08:12 by nour              #+#    #+#             */
-/*   Updated: 2026/01/07 18:44:04 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/08 18:29:18 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Ice.hpp"
-
+# include "ICharacter.hpp"
 //  public:
 // 	Ice();
 // 	virtual ~Ice();
@@ -23,11 +23,11 @@
 
 Ice::Ice(void) : AMateria("ice")
 {
-   std::cout << "Ice constructor called" << std::endl;
+	std::cout << "Ice constructor called" << std::endl;
 }
 Ice::~Ice(void)
 {
-   std::cout << "Ice destructor called" << std::endl;
+	std::cout << "Ice destructor called" << std::endl;
 }
 Ice &Ice::operator=(const Ice &other)
 {
@@ -42,9 +42,9 @@ Ice::Ice(const Ice &other) :AMateria(other)
 }
 AMateria *Ice::clone(void) const
 {
-	return new Ice(*this);
+	return (new Ice(*this));
 }
-void    AMateria::use(ICharacter &target)
+void    Ice::use(ICharacter &target)
 {
     std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

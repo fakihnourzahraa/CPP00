@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 19:21:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:22:10 by nour             ###   ########.fr       */
+/*   Created: 2026/01/08 18:52:13 by nour              #+#    #+#             */
+/*   Updated: 2026/01/08 18:52:19 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-# define MATERIASORUCE_HPP
-
-
-# include "iostream"
-# include "fstream"
-# include "iomanip"
-# include "cstdlib"
-
-class ICharacter
-{
-
-};
-
-
-#endif
+# include "Character.hpp"

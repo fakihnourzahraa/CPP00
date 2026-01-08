@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 13:16:28 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 20:05:48 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/08 18:38:52 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@
 class ICharacter
 {
 	public:
+	ICharacter();
+	ICharacter &operator=(const ICharacter &other);
+	ICharacter(const ICharacter &other);
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;
