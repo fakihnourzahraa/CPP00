@@ -1,4 +1,3 @@
-# CPP00
+# CPP04
 
-fix CTRL D in CPP00 EX01 EOF
-dont forget flags
+test without virtual
