@@ -1,4 +1,4 @@
-NAME = and_open
+NAME = abstract_zoo
 
 SRC = Animal.cpp Cat.cpp Dog.cpp Brain.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)

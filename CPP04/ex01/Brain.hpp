@@ -6,13 +6,12 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 11:51:46 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 12:59:52 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/08 20:21:21 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
-
 
 # include "iostream"
 # include "fstream"

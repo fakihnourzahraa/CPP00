@@ -1,4 +1,4 @@
-NAME = and_open
+NAME = zoo
 
 SRC = Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
