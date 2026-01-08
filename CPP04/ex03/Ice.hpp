@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 13:39:39 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/08 19:36:02 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "fstream"
 # include "iomanip"
 # include "cstdlib"
-# include "ICharacter.hpp"
 # include "AMateria.hpp"
 
 class Ice : public AMateria
