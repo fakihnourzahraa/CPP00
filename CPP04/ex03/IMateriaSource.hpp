@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 13:16:28 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:20:43 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/08 19:48:01 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef IMATERIASOURCE_HPP
-# define *MATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 # include "iostream"
 # include "fstream"
