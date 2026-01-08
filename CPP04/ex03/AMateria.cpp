@@ -3,23 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 11:08:12 by nour              #+#    #+#             */
-/*   Updated: 2026/01/07 18:45:07 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/08 18:06:11 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "AMateria.hpp"
+# include "ICharacter.hpp"
 
-AMateria::AMateria(void) : type("default")
+AMateria::AMateria(void)
 {
-    std::cout << "AMateria constructor called" << std::endl;
+    this->type = "default";
+    std::cout << "AMateria default constructor is called" << std::endl;
 }
 
-AMateria::AMateria(std::string const &type) : type(type)
+AMateria::AMateria(std::string const &type)
 {
-    std::cout << "AMateria constructor called" << std::endl;
+    this->type = type;
+    std::cout << "AMateria " << type << "constructor is called" << std::endl;
 }
 
 AMateria::~AMateria(void)
@@ -45,9 +48,6 @@ AMateria::AMateria(const AMateria &other) : type(other.type)
 AMateria  &AMateria::operator=(const AMateria &other)
 {
     std::cout << "AMateria copy assignement constructor is called" << std::endl;
-    // if (this == &other)
-    // {
-    //     return *this;
-    // }
+    (void)other;
     return (*this);
 }

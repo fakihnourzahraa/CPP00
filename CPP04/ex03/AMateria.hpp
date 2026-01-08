@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 20:28:04 by nour              #+#    #+#             */
-/*   Updated: 2026/01/07 18:37:49 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/08 17:55:58 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include "fstream"
 # include "iomanip"
 # include "cstdlib"
-# include "ICharacter.hpp"
-# include "MateriaSource.hpp"
+
+class ICharacter;
 
 class AMateria
 {
@@ -33,10 +33,9 @@ class AMateria
 	virtual void use(ICharacter &target);
 
 	AMateria();
-	~AMateria();
+	virtual ~AMateria();
 	AMateria &operator=(const AMateria &other);
 	AMateria(const AMateria &other);
-
 };
 
 #endif
