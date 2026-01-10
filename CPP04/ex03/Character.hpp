@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:51:36 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:18:29 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/10 15:56:22 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class Character : public ICharacter
 {
 	private:
 	std::string name;
-	AMateria *inventory[4];
-	
+	int			availability[4];
+	AMateria 	*inventory[4];
+	AMateria	**inventory;
+
 	public:
 	Character();
 	~Character();

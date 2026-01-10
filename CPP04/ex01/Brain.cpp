@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 12:06:20 by nour              #+#    #+#             */
-/*   Updated: 2026/01/04 12:59:44 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/10 14:49:13 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,12 @@ Brain::~Brain()
 }
 
 
-Brain::Brain(const Brain &other) : ideas(other.ideas)
+Brain::Brain(const Brain &other)
 {
+	for (int i = 0; i<100; i++)
+	{
+		this->ideas[i] = other.ideas[i];
+	}
     std::cout << "Brain copy constructor is called" <<std::endl;
 }
 

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:21:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:55:37 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/10 15:10:48 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
-# define MATERIASORUCE_HPP
+# define MATERIASOURCE_HPP
 
 # include "iostream"
 # include "fstream"

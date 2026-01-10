@@ -1,6 +1,6 @@
 NAME = recap
 
-SRC = Animal.cpp Cat.cpp Dog.cpp Brain.cpp main.cpp
+SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 CC  = c++ -Wall -Werror -Wextra -std=c++98

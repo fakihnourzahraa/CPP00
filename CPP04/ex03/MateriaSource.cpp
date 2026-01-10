@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:47:25 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:54:11 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/10 15:23:55 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ MateriaSource::~MateriaSource(void)
 
 MateriaSource::MateriaSource(const MateriaSource &other)
 {
-    std::cout << "AMateria copy constructor is called" <<std::endl;
+	(void) other;
+    std::cout << "MateriaSource copy constructor is called" <<std::endl;
 }
 
-AMateria  &AMateria::operator=(const AMateria &other)
+MateriaSource  &MateriaSource::operator=(const MateriaSource &other)
 {
-    std::cout << "AMateria copy assignement constructor is called" << std::endl;
+    std::cout << "MateriaSource copy assignement constructor is called" << std::endl;
     (void)other;
     return (*this);
 }
@@ -41,5 +42,6 @@ void MateriaSource::learnMateria(MateriaSource*)
 
 MateriaSource	*MateriaSource::createMateria(std::string const &type)
 {
-	
+(void) type;
+return (this);
 }

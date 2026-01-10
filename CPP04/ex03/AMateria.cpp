@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 11:08:12 by nour              #+#    #+#             */
-/*   Updated: 2026/01/08 19:37:23 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/10 15:24:31 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ AMateria::AMateria(void)
 AMateria::AMateria(std::string const &type)
 {
     this->type = type;
-    std::cout << "AMateria " << type << "constructor is called" << std::endl;
+    std::cout << "AMateria " << type << " constructor is called" << std::endl;
 }
 
 AMateria::~AMateria(void)
