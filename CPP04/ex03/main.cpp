@@ -3,22 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/10 15:22:12 by nfakih           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/10 20:00:00 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/17 15:21:14 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,68 +20,69 @@
 
 int main()
 {
-    std::cout << "=== Test 1: Creating Ice and Cure ===" << std::endl;
-    {
-        Ice* ice = new Ice();
-        Cure* cure = new Cure();
+    // std::cout << "=== Test 1: Creating Ice and Cure ===" << std::endl;
+    // {
+    //     Ice* ice = new Ice();
+    //     Cure* cure = new Cure();
         
-        std::cout << "Ice type: " << ice->getType() << std::endl;
-        std::cout << "Cure type: " << cure->getType() << std::endl;
+    //     std::cout << "Ice type: " << ice->getType() << std::endl;
+    //     std::cout << "Cure type: " << cure->getType() << std::endl;
         
-        delete ice;
-        delete cure;
-    }
+    //     delete ice;
+    //     delete cure;
+    // }
     
-    std::cout << "\n=== Test 2: Clone functionality ===" << std::endl;
-    {
-        Ice* ice1 = new Ice();
-        AMateria* ice2 = ice1->clone();
+    // std::cout << "\n=== Test 2: Clone functionality ===" << std::endl;
+    // {
+    //     Ice* ice1 = new Ice();
+    //     AMateria* ice2 = ice1->clone();
         
-        Cure* cure1 = new Cure();
-        AMateria* cure2 = cure1->clone();
+    //     Cure* cure1 = new Cure();
+    //     AMateria* cure2 = cure1->clone();
         
-        std::cout << "Original ice type: " << ice1->getType() << std::endl;
-        std::cout << "Cloned ice type: " << ice2->getType() << std::endl;
-        std::cout << "Original cure type: " << cure1->getType() << std::endl;
-        std::cout << "Cloned cure type: " << cure2->getType() << std::endl;
+    //     std::cout << "Original ice type: " << ice1->getType() << std::endl;
+    //     std::cout << "Cloned ice type: " << ice2->getType() << std::endl;
+    //     std::cout << "Original cure type: " << cure1->getType() << std::endl;
+    //     std::cout << "Cloned cure type: " << cure2->getType() << std::endl;
         
-        delete ice1;
-        delete ice2;
-        delete cure1;
-        delete cure2;
-    }
+    //     delete ice1;
+    //     delete ice2;
+    //     delete cure1;
+    //     delete cure2;
+    // }
     
-    std::cout << "\n=== Test 3: Character creation ===" << std::endl;
-    {
-        Character* bob = new Character("Bob");
-        Character* alice = new Character("Alice");
+    // std::cout << "\n=== Test 3: Character creation ===" << std::endl;
+    // {
+    //     Character* bob = new Character("Bob");
+    //     Character* alice = new Character("Alice");
         
-        std::cout << "Character 1 name: " << bob->getName() << std::endl;
-        std::cout << "Character 2 name: " << alice->getName() << std::endl;
+    //     std::cout << "Character 1 name: " << bob->getName() << std::endl;
+    //     std::cout << "Character 2 name: " << alice->getName() << std::endl;
         
-        delete bob;
-        delete alice;
-    }
+    //     delete bob;
+    //     delete alice;
+    // }
     
     std::cout << "\n=== Test 4: Equipping materias ===" << std::endl;
     {
         Character* hero = new Character("Hero");
-        
+
         std::cout << "Equipping Ice..." << std::endl;
         hero->equip(new Ice());
-        
+                std::cout<< std::endl;
         std::cout << "Equipping Cure..." << std::endl;
         hero->equip(new Cure());
-        
+        std::cout<< std::endl;
         std::cout << "Equipping another Ice..." << std::endl;
         hero->equip(new Ice());
-        
+                std::cout<< std::endl;
         std::cout << "Equipping another Cure..." << std::endl;
         hero->equip(new Cure());
-        
+                std::cout<< std::endl;
         std::cout << "Trying to equip 5th materia (should fail)..." << std::endl;
         hero->equip(new Ice());
         
+                std::cout<< std::endl;        std::cout<< std::endl;
         delete hero;
     }
     
@@ -144,8 +133,6 @@ int main()
         std::cout << "Using slot 1 (should still work):" << std::endl;
         hero->use(1, *target);
         
-        // Important: manually delete unequipped materias
-        delete ice;
         
         delete target;
         delete hero;
@@ -161,30 +148,30 @@ int main()
         delete hero;
     }
     
-    std::cout << "\n=== Test 8: Character copy constructor ===" << std::endl;
-    {
-        Character* original = new Character("Original");
-        original->equip(new Ice());
-        original->equip(new Cure());
+    // std::cout << "\n=== Test 8: Character copy constructor ===" << std::endl;
+    // {
+    //     Character* original = new Character("Original");
+    //     original->equip(new Ice());
+    //     original->equip(new Cure());
         
-        std::cout << "Creating copy of character..." << std::endl;
-        Character* copy = new Character(*original);
+    //     std::cout << "Creating copy of character..." << std::endl;
+    //     Character* copy = new Character(*original);
         
-        std::cout << "Original name: " << original->getName() << std::endl;
-        std::cout << "Copy name: " << copy->getName() << std::endl;
+    //     std::cout << "Original name: " << original->getName() << std::endl;
+    //     std::cout << "Copy name: " << copy->getName() << std::endl;
         
-        Character* target = new Character("Target");
+    //     Character* target = new Character("Target");
         
-        std::cout << "Original using materia:" << std::endl;
-        original->use(0, *target);
+    //     std::cout << "Original using materia:" << std::endl;
+    //     original->use(0, *target);
         
-        std::cout << "Copy using materia:" << std::endl;
-        copy->use(0, *target);
+    //     std::cout << "Copy using materia:" << std::endl;
+    //     copy->use(0, *target);
         
-        delete target;
-        delete original;
-        delete copy;
-    }
+    //     delete target;
+    //     delete original;
+    //     delete copy;
+    // }
     
     std::cout << "\n=== Test 9: Character assignment operator ===" << std::endl;
     {
