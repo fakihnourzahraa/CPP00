@@ -3,7 +3,7 @@ NAME = recap
 SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 
-CC  = c++ -Wall -Werror -Wextra -std=c++98
+CC  = c++ -std=c++98
 
 all: $(NAME)
 

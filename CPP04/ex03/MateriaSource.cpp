@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:47:25 by nour              #+#    #+#             */
-/*   Updated: 2026/01/10 15:23:55 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/17 16:02:48 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,15 @@ MateriaSource  &MateriaSource::operator=(const MateriaSource &other)
     return (*this);
 }
 
-void MateriaSource::learnMateria(MateriaSource*)
+void MateriaSource::learnMateria(AMateria*)
 {
-	
+
 }
 
-MateriaSource	*MateriaSource::createMateria(std::string const &type)
+AMateria	*MateriaSource::createMateria(std::string const &type)
 {
 (void) type;
-return (this);
+return (NULL);
 }
+	void learnMateria(AMateria*);
+	AMateria	*createMateria(std::string const &type);

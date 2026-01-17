@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:52:13 by nour              #+#    #+#             */
-/*   Updated: 2026/01/17 15:19:41 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/17 16:20:34 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Character::Character()
 {
 	for (int j = 0; j < 4; j++)
-		availability[j] = 0;
+		availability[j] = 1;
 	this->name = "Default";
 	this->r = 0;
 	capacity = 100;
@@ -113,8 +113,19 @@ void	Character::unequip(int inx)
 	}
 }
 
+// void	Character::use(int idx, ICharacter &target)
+// {
+// 	(void) idx;
+// 	(void) target;
+// }
+
 void	Character::use(int idx, ICharacter &target)
 {
-	(void) idx;
-	(void) target;
+	if (idx < 4 && availability[idx] == 0)
+	{
+		std::string const a = inventory[idx]->getType();
+	// 		std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	// 	else if (inventory[idx]->getType() == "cure")
+	// 		std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+	}
 }

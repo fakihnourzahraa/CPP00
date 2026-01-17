@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:21:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/10 15:10:48 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/17 16:01:31 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@
 # include "cstdlib"
 # include "IMateriaSource.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
+	public :
 	MateriaSource();
 	~MateriaSource();
 	MateriaSource &operator=(const MateriaSource &other);
 	MateriaSource(const MateriaSource &other);
-	void learnMateria(MateriaSource*);
-	MateriaSource	*createMateria(std::string const &type);
+	void learnMateria(AMateria*);
+	AMateria	*createMateria(std::string const &type);
 };
 
 
