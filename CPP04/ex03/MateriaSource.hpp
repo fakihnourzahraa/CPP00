@@ -6,7 +6,7 @@
 /*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 19:21:27 by nour              #+#    #+#             */
-/*   Updated: 2026/01/17 16:01:31 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/17 16:28:20 by nour             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@
 
 class MateriaSource : public IMateriaSource
 {
+	private:
+        AMateria* templates[4]; 
 	public :
 	MateriaSource();
 	~MateriaSource();
 	MateriaSource &operator=(const MateriaSource &other);
 	MateriaSource(const MateriaSource &other);
-	void learnMateria(AMateria*);
+	void learnMateria(AMateria*m);
 	AMateria	*createMateria(std::string const &type);
 };
 
