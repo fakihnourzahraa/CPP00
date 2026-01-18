@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/08 20:17:51 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/18 12:18:29 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
     const Animal *animal = new Animal();
     animal->makeSound();
     std::cout << std::endl;
+	
     const Animal *dog = new Dog();
     dog->makeSound();
     std::cout << std::endl;

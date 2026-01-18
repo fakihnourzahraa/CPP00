@@ -6,7 +6,7 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/10 14:56:21 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/18 12:27:21 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,6 @@
 # include "Dog.hpp"
 # include "Cat.hpp"
 # include "Brain.hpp"
-
-
-// int main()
-// {
-//     const Animal *animal[10];
-//     for (int i = 0; i < 5; i++)
-//     {
-//         animal[i] = new Dog();
-//     }
-//     for (int i = 5; i < 10; i++)
-//     {
-//         animal[i] = new Cat();
-//     }
-//     (void)animal;
-//     return (0);
-// }
 
 int main()
 {

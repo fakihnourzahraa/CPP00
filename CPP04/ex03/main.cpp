@@ -6,7 +6,7 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:47:46 by nfakih            #+#    #+#             */
-/*   Updated: 2026/01/18 12:13:20 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/18 12:14:36 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,21 +64,21 @@ int main()
 	Character* original = new Character("Original");
 	original->equip(new Ice());
 	original->equip(new Cure());
-	
+
 	std::cout << "Creating copy...\n";
 	Character* copy = new Character(*original);
-	
-	ICharacter* target = new Character("Target");
-	
+
+	ICharacter* m = new Character("m");
+
 	std::cout << "\nOriginal using materias:\n";
-	original->use(0, *target);
-	original->use(1, *target);
-	
+	original->use(0, *m);
+	original->use(1, *m);
+
 	std::cout << "\nCopy using materias:\n";
-	copy->use(0, *target);
-	copy->use(1, *target);
-	
-	delete target;
+	copy->use(0, *m);
+	copy->use(1, *m);
+
+	delete m;
 	delete original;
 	delete copy;
 
@@ -86,27 +86,27 @@ int main()
 	Character* char1 = new Character("Character1");
 	char1->equip(new Ice());
 	char1->equip(new Cure());
-	
+
 	Character* char2 = new Character("Character2");
 	char2->equip(new Ice());
-	
+
 	std::cout << "Before assignment:\n";
 	std::cout << "char1 name: " << char1->getName() << std::endl;
 	std::cout << "char2 name: " << char2->getName() << std::endl;
-	
+
 	std::cout << "\nAssigning char1 to char2...\n";
 	*char2 = *char1;
-	
+
 	std::cout << "After assignment:\n";
 	std::cout << "char1 name: " << char1->getName() << std::endl;
 	std::cout << "char2 name: " << char2->getName() << std::endl;
-	
-	ICharacter* target = new Character("Target");
+
+	ICharacter* n = new Character("n");
 	std::cout << "\nchar2 using materias:\n";
-	char2->use(0, *target);
-	char2->use(1, *target);
-	
-	delete target;
+	char2->use(0, *n);
+	char2->use(1, *n);
+
+	delete n;
 	delete char1;
 	delete char2;
 
