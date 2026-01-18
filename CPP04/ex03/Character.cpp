@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nour <nour@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:52:13 by nour              #+#    #+#             */
-/*   Updated: 2026/01/17 16:24:41 by nour             ###   ########.fr       */
+/*   Updated: 2026/01/18 12:02:31 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,30 @@ Character::Character()
 	{
 		availability[j] = 1;
 		inventory[j] = NULL;
-		disposal[j] = NULL;
 	}
+	this->disposal = new AMateria*[100];
+	for (int i = 0; i < 100; i++)
+		disposal[i] = NULL;
 	this->name = "Default";
 	this->r = 0;
-	capacity = 100;
+	this->capacity = 100;
 	std::cout << "Default character constructor is called" << std::endl;
+}
+
+Character::Character(std::string const &name)
+{
+	for (int j = 0; j < 4; j++)
+	{
+		availability[j] = 1;
+		inventory[j] = NULL;
+	}
+	this->disposal = new AMateria*[100];
+	for (int i = 0; i < 100; i++)
+		disposal[i] = NULL;
+	this->name = name;
+	this->r = 0;
+	this->capacity = 100;
+	std::cout << "Character constructor is called" << std::endl;
 }
 
 Character::~Character()
@@ -37,7 +55,8 @@ Character::~Character()
 			disposal[j] = NULL;
 		}
 		j++;
-	}
+	}    
+	delete[] disposal;
 
 	int i = 0;
 	while (i < 4)
@@ -45,7 +64,8 @@ Character::~Character()
 		if (availability[i] == 0)
 		{
 			if (inventory[i])
-			{	delete inventory[i];
+			{
+				delete inventory[i];
 				inventory[i] = NULL;
 			}
 		}
@@ -54,32 +74,95 @@ Character::~Character()
 	std::cout << "Character destructor is called" << std::endl;
 }
 
-Character::Character(std::string const &name)
-{
-	for (int j = 0; j < 4; j++)
-		availability[j] = 1;
-	this->name = name;
-	this->r = 0;
-	std::cout << "Character constructor is called" << std::endl;
-}
-
 Character &Character::operator=(const Character &other)
 {
-	// int j = 0;
 	std::cout << "Character copy assignment operator called" << std::endl;
-    if (this != &other)
+    if (this == &other)
     {
 	    return (*this);
 	}
-	this->name = other.name;
+    for (int i = 0; i < r; i++)
+    {
+        if (disposal[i])
+        {
+            delete disposal[i];
+            disposal[i] = NULL;
+        }
+    }
+	for (int i = 0; i < 4; i++)
+	{
+	    if (availability[i] == 0 && inventory[i])
+	    {
+			delete inventory[i];
+			inventory[i] = NULL;
+	    }
+	}
+	this->name = other.name;;
 	this->r = other.r;
+	this->capacity = other.capacity;
+	for (int j = 0; j < 4; j++)
+	{
+		this->availability[j] = other.availability[j];
+	}
+	for (int i = 0; i < 4; i++)
+	{
+	    if (other.availability[i] == 0 && other.inventory[i])
+	    {
+			this->inventory[i] = other.inventory[i]->clone();
+	    }
+	    else
+	    {
+			this->inventory[i] = NULL;
+	    }
+	}
+	for (int i = 0; i < other.r; i++)
+	{
+	    if (other.disposal[i])
+	    {
+			this->disposal[i] = other.disposal[i]->clone();
+	    }
+	    else
+	    {
+			this->disposal[i] = NULL;
+	    }
+	}
     return (*this);
 }
 
 Character::Character(const Character &other)
 {
-	(void) other;
 	std::cout << "Character copy operator is called" << std::endl;
+	this->name = other.name;;
+	this->r = other.r;
+	this->capacity = other.capacity;
+	this->disposal = new AMateria*[capacity];
+	for (int i = 0; i < other.r; i++)
+	{
+	    if (other.disposal[i])
+	    {
+			this->disposal[i] = other.disposal[i]->clone();
+	    }
+	    else
+	    {
+			this->disposal[i] = NULL;
+	    }
+	}
+	for (int j = 0; j < 4; j++)
+	{
+		this->availability[j] = other.availability[j];
+	}
+	for (int i = 0; i < 4; i++)
+	{
+	    if (other.availability[i] == 0 && other.inventory[i])
+	    {
+			this->inventory[i] = other.inventory[i]->clone();
+	    }
+	    else
+	    {
+			this->inventory[i] = NULL;
+	    }
+	}
+
 }
 
 std::string const &Character::getName() const
@@ -111,26 +194,33 @@ void	Character::unequip(int inx)
 	if (availability[inx] == 0)
 	{
 		availability[inx] = 1;
-		disposal[r] = inventory[inx];
-		r++;
-		inventory[inx] = NULL;
 	}
+	if (r < capacity)
+        {
+            disposal[r] = inventory[inx];
+            r++;
+        }
+        else
+        {
+            AMateria **new_disposal = new AMateria *[capacity * 2];
+            for (int i = 0; i < r; i++)
+            {
+                new_disposal[i] = disposal[i];
+            }
+            new_disposal[r] = inventory[inx];
+			delete []disposal;
+			disposal = new_disposal;
+			capacity = capacity*2;
+			r++;
+        }
+        inventory[inx] = NULL;
 }
 
-// void	Character::use(int idx, ICharacter &target)
-// {
-// 	(void) idx;
-// 	(void) target;
-// }
 
 void	Character::use(int idx, ICharacter &target)
 {
-	if (idx < 4 && availability[idx] == 0)
+	if (idx < 4 && idx >= 0 && availability[idx] == 0)
 	{
 		inventory[idx]->use(target);
-		// std::string const a = inventory[idx]->getType();
-	// 		std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
-	// 	else if (inventory[idx]->getType() == "cure")
-	// 		std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 	}
 }
