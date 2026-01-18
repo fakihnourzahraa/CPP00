@@ -6,7 +6,7 @@
 /*   By: nfakih <nfakih@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:52:13 by nour              #+#    #+#             */
-/*   Updated: 2026/01/18 12:02:31 by nfakih           ###   ########.fr       */
+/*   Updated: 2026/01/18 12:10:12 by nfakih           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,7 +194,6 @@ void	Character::unequip(int inx)
 	if (availability[inx] == 0)
 	{
 		availability[inx] = 1;
-	}
 	if (r < capacity)
         {
             disposal[r] = inventory[inx];
@@ -214,8 +213,8 @@ void	Character::unequip(int inx)
 			r++;
         }
         inventory[inx] = NULL;
+	}
 }
-
 
 void	Character::use(int idx, ICharacter &target)
 {
